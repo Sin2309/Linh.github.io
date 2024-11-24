@@ -10,7 +10,7 @@ jupyter:
   nbformat_minor: 0
 ---
 
-::: {.cell .markdown id="6DTP4bYoEWjW"}
+
 1.  Write a program to print out the grade of a person according to the
     following criteria:
 
@@ -22,7 +22,7 @@ jupyter:
 Hint: do you have enough information to write a program?
 :::
 
-::: {.cell .code execution_count="27" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="hgqi-hZw-zTZ" outputId="55843f1e-c770-47af-837e-007803a788c8"}
+
 ``` python
 # Input: Score of the person
 score = float(input("Enter the score: "))
