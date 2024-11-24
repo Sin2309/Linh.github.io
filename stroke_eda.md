@@ -777,9 +777,7 @@ for col in numerical_cols:
 **Exercises**
 
 **Can you visualize these results?**
-:::
 
-::: {.cell .code execution_count="44" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":1000}" id="AlUA5jH_pY1a" outputId="d06dbf35-3e39-4060-c40f-62c4e9dba893"}
 ``` python
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -791,36 +789,20 @@ for col in numerical_cols:
     plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/f657b8a2965ea345b16b57b927bf4a62ffa0a905.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/14c742c9e0b761fc242a93e6d1385c76a606c467.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/19555ee16b8028c9ebb9f4c22dd5073d76463d3c.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/a4c7aeb1ca5dfd3a03a8ede81c36fc6021ad3807.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/1dd9f1ae6aee5e10f03166f24e47099e0bfa392e.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/27962b667bdd1497d60182183235eec679433f36.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/4b071ab7eac9032f1118e02e3e99dc980c3733b5.png)
-:::
-:::
 
-::: {.cell .markdown id="oWnGlNd9pfWT"}
 **Exercises** **What interpretation can you draw from these results?**
 
 From the aggregated means:
@@ -840,26 +822,19 @@ These numerical trends align with known risk factors for stroke (e.g.,
 age, high glucose, high BMI). However, causal relationships cannot be
 confirmed due to potential confounding factors or biases in data
 collection.
-:::
 
-::: {.cell .markdown id="M4bvNNmFRwFR"}
 **Target Variable vs Categorical Attributes**
-:::
 
-::: {.cell .markdown id="fbeS_FH8R0fs"}
 **Exercises**
 
 **Can you repeat the computation above for categorical columns?**
-:::
 
-::: {.cell .code execution_count="47" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="eh67bXBAqEUu" outputId="b157c1d1-bba2-42ea-e5c2-4d09f5ecf53a"}
 ``` python
 categorical_cols = ['gender', 'hypertension', 'heart_disease', 'ever_married']
 for col in categorical_cols:
     print(stroke_data.groupby("stroke")[col].value_counts(normalize=True), "\n")
 ```
 
-::: {.output .stream .stdout}
     stroke  gender
     0       Female    0.586916
             Male      0.412878
@@ -888,16 +863,11 @@ for col in categorical_cols:
     1       Yes             0.883534
             No              0.116466
     Name: proportion, dtype: float64 
-:::
-:::
 
-::: {.cell .markdown id="DwIpM2TSqIvk"}
 **Exercises**
 
 **Can you also plot the results?**
-:::
 
-::: {.cell .code execution_count="46" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":1000}" id="dd9A9rJUqbBE" outputId="41657159-f412-4c29-a29c-4a5acd67483a"}
 ``` python
 for col in categorical_cols:
     plt.figure(figsize=(6, 4))
@@ -906,24 +876,14 @@ for col in categorical_cols:
     plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/eb18117e708b5b1fe063775c9aa1ff466cafe952.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/2d7df0a4207b39f2e26c31570e668287f72836df.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/950ba9da86dc5c982c709fc89ffd6366255e7874.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/bc37e517fdd2fe7ae2633b630409618d8661fd9c.png)
-:::
-:::
 
-::: {.cell .markdown id="uqsrXulXqbV7"}
 **Exercises**
 
 **What insights can you draw from the results?**
@@ -935,4 +895,3 @@ for col in categorical_cols:
 -   Marriage Status: If stroke is more prevalent in married individuals,
     it might indicate older age rather than marital status directly
     causing strokes.
-:::
