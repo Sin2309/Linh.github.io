@@ -1,1 +1,1 @@
-[My portfolio]()
+[My portfolio](/stroke_eda)
