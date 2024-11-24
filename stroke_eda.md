@@ -421,13 +421,13 @@ numerical_cols, categorical_cols = col_names(stroke_data)
 # Visuealize each attribute
 sns.histplot(x=stroke_data["age"], data=stroke_data, color="blue")
 ```
+
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/ca64389078bca9516952181a2f2386deebfa28be.png)
+
 **Exercises:**
 
 -   Can you plot the histograms of other numerical columns?
-:::
 
-::: {.cell .code execution_count="10" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":928}" id="7zVsMKELKMUk" outputId="dd19cb1b-0b58-4876-bfac-6aace8ded05e"}
 ``` python
 # Plot histogram for avg_glucose_level
 sns.histplot(x=stroke_data["avg_glucose_level"], color="green", kde=True)
@@ -440,23 +440,15 @@ plt.title("Distribution of BMI")
 plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/6838ba26c3ee5e89b7d76dfb94f3b8a2c927af33.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/3ebeb9a00ff6de45ee807b79b76731c1bab9ed88.png)
-:::
-:::
 
-::: {.cell .markdown id="35OWmFRi6RR-"}
 **Exercises:**
 
 -   Can you show the plots of \"age\", \"avg_glucose_level\", \"bmi\"
     side by side, i.e. 3 plots on the same row?
-:::
 
-::: {.cell .code execution_count="29" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":508}" id="ThW12bo5Kl8p" outputId="27ad7145-f99a-4be9-da9b-744c752f0872"}
 ``` python
 # Create subplots for age, avg_glucose_level, and bmi
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -477,12 +469,8 @@ plt.tight_layout()
 plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/107a77e993e7f5fee9b0e00f053448d5c8f389d0.png)
-:::
-:::
 
-::: {.cell .markdown id="GV44Z5ZKKb0v"}
 **Exercises:**
 
 -   Can you show customize the axes of the plots to show \"Age\" ,
@@ -490,9 +478,7 @@ plt.show()
 -   References:
     -   <https://seaborn.pydata.org/generated/seaborn.histplot.html>
     -   <https://www.w3schools.com/python/matplotlib_histograms.asp>
-:::
 
-::: {.cell .code execution_count="13" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":1000}" id="-GR-W_gaKuXs" outputId="4782751e-7609-444e-86a0-7d29b933bd30"}
 ``` python
 # Customized histogram plots
 sns.histplot(x=stroke_data["age"], color="blue")
@@ -514,20 +500,12 @@ plt.title("BMI Distribution")
 plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/77dad8c862892c90e9154511444a5c5ad8550139.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/acfc1fe1ac38076d42a24c000347e943bcdf89ec.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/6be3250b81efd13f401f0870db8a675806b5e8e2.png)
-:::
-:::
 
-::: {.cell .markdown id="nc36gQ8X6YTq"}
 **Check for Outliers** Outliers are another \"defect\" in the data that
 need \"correction\":
 
@@ -574,9 +552,7 @@ Outliers should be carefully handled during exploratory data analysis
     instead of the mean.
 -   Applying transformations (e.g., log or square root) to reduce their
     impact.
-:::
 
-::: {.cell .code execution_count="9" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":718}" id="ulWo4euq6jEL" outputId="5e282b85-38a3-4895-f82b-2d8ec9232db7"}
 ``` python
 import matplotlib.pyplot as plt
 plt.figure(figsize=(14,8))
@@ -585,24 +561,14 @@ columns = ["age", "avg_glucose_level", "bmi" ]
 sns.boxplot(x=stroke_data["bmi"], data=stroke_data, color="indianred")
 ```
 
-::: {.output .execute_result execution_count="9"}
-    <Axes: xlabel='bmi'>
-:::
-
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/fb45c995d7a1f80870342bef422b0032146d6a84.png)
-:::
-:::
 
-::: {.cell .markdown id="ZFvoR59PTfuH"}
 What do the box, \"whiskers\", and dots indicate?
 
 **Exercises:**
 
 -   Can you plot the histograms of other numerical columns?
-:::
 
-::: {.cell .code execution_count="35" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":1000}" id="1nU8xKoDTaFt" outputId="8cd8764f-476f-46a7-acfc-155905ed1fad"}
 ``` python
 # Plot histograms for numerical columns
 numerical_cols = ['age', 'avg_glucose_level', 'bmi']
@@ -614,20 +580,12 @@ for col in numerical_cols:
     plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/fde00672780273ab7bbe216f470c883022d4a318.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/d3a7e1d17ee364641a224b48da93cd933c9f3e8f.png)
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/5c969ccb9ba3c24f98ef4891a450603e97070da9.png)
-:::
-:::
 
-::: {.cell .markdown id="sHnnvNa1OOCY"}
 **Exercises:**
 
 -   Can you show the box plots of \"age\", \"avg_glucose_level\",
@@ -636,9 +594,7 @@ for col in numerical_cols:
 -   References:
     -   <https://seaborn.pydata.org/generated/seaborn.boxplot.html>
     -   <https://www.geeksforgeeks.org/box-plot-in-python-using-matplotlib/>
-:::
 
-::: {.cell .code execution_count="36" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":452}" id="KllI9PocTsSz" outputId="fc769e1c-c8bd-4440-fa59-66ab69afb20b"}
 ``` python
 # Create vertically-oriented boxplots
 sns.boxplot(data=stroke_data[numerical_cols], orient="v", palette="Set2")
@@ -648,12 +604,8 @@ plt.xticks(ticks=range(len(numerical_cols)), labels=numerical_cols)
 plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/2c73e4d801e1423d8effd43ca569369974a9158f.png)
-:::
-:::
 
-::: {.cell .markdown id="jZ5HHqgBOPwZ"}
 #### \[Extra\] Checking for Outliers in Numerical Attributes
 
 IQR (Interqartile range) is being used to check for outliers. There are
@@ -661,9 +613,7 @@ other methods to do this, this snippet is mainly to practice the concept
 of functions in Python.
 
 check_outliers() - This function will return the columns with outliers
-:::
 
-::: {.cell .code execution_count="20" id="S4N__CdQOVtE"}
 ``` python
 def check_outliers(df, numerical_cols, iqr=1.5, low_threshold=0.1, up_threshold=0.9):
     outlier_cols = []
@@ -679,24 +629,16 @@ def check_outliers(df, numerical_cols, iqr=1.5, low_threshold=0.1, up_threshold=
         print("There is no outliers")
     return outlier_cols
 ```
-:::
 
-::: {.cell .code execution_count="15" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="YfOG66GWObKW" outputId="16e5fd2b-0dfd-4153-a958-5dbb4088a6bd"}
 ``` python
 outlier_cols = check_outliers(stroke_data, ['age'])
 ```
 
-::: {.output .stream .stdout}
     There is no outliers
-:::
-:::
 
-::: {.cell .markdown id="kzoMGCUkOfqh"}
 **Exercises**: Can you update the function call above to check for
 outliers for all numerical columns?
-:::
 
-::: {.cell .code execution_count="42" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="Od2F4OerlEJn" outputId="f76cade7-22d1-48b1-9abc-3873695cfc31"}
 ``` python
 # Automatically identify numerical columns
 numerical_cols = stroke_data.select_dtypes(include=['float64', 'int64']).columns.tolist()
@@ -711,41 +653,27 @@ else:
     print("No outliers detected in numerical columns.")
 ```
 
-::: {.output .stream .stdout}
     Columns with outliers: ['hypertension', 'heart_disease', 'bmi', 'stroke']
-:::
-:::
 
-::: {.cell .code execution_count="19" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":494}" id="pfn7p15yOv-2" outputId="dfc2a9b2-0ee0-4f5b-eb8c-b6af2b0f5be6"}
 ``` python
 # Plot as percentage
 plt.pie(stroke_data["stroke"].value_counts(), labels=[1,0], colors=["indianred", "mistyrose"])
 ```
 
-::: {.output .execute_result execution_count="19"}
     ([<matplotlib.patches.Wedge at 0x7818790c5db0>,
       <matplotlib.patches.Wedge at 0x7818790c5cf0>],
      [Text(-1.0871361453364168, 0.16773491438301516, '1'),
       Text(1.087136143373357, -0.1677349271061446, '0')])
-:::
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/30b9d4e28eae1fecfde6730c45dd5b3400c26e40.png)
-:::
-:::
 
-::: {.cell .markdown id="h4lyCMClO-Oy"}
 Ratio of 1s is 95.1%
-:::
 
-::: {.cell .markdown id="VArPuj6lmdLX"}
 **Exercises**
 
 -   Can you update the labels to \"Stroke\" and \"No stroke\" instead of
     \"0\" and \"1\"?
-:::
 
-::: {.cell .code execution_count="43" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":428}" id="L4TcWzP5mZlp" outputId="94fd4a1f-3e0b-4d30-8fb8-5f319d57e859"}
 ``` python
 plt.pie(stroke_data["stroke"].value_counts(),
         labels=["No Stroke", "Stroke"],
@@ -755,12 +683,8 @@ plt.title("Stroke Distribution")
 plt.show()
 ```
 
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/03f15942f1d9d8037d1c04cc280bf33676f5fe38.png)
-:::
-:::
 
-::: {.cell .markdown id="6STR6FsHO2U2"}
 **Exercises** *Can you comment on the distribution of \"Stroke\" vs \"No
 stroke\" labels, how would this affect your predictive model?* The
 \"Stroke\" variable shows a highly imbalanced distribution, with 95.1%
@@ -804,27 +728,15 @@ example, if males have a higher stroke rate, it could suggest lifestyle
 factors like alcohol consumption or unhealthy eating. However, this
 could also reflect data collection bias (e.g., males being
 overrepresented or females being underdiagnosed).
-:::
 
-::: {.cell .markdown id="Y1dxjMglPEAW"}
 **Correlation between numerical columns**
-:::
 
-::: {.cell .code execution_count="33" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":458}" id="cCPD1YZVPF0K" outputId="d7a25b76-b3b6-4cc5-edc1-d91bbf97696e"}
 ``` python
 sns.heatmap(stroke_data[numerical_cols].corr(), annot=True, linewidths=0.5,)
 ```
 
-::: {.output .execute_result execution_count="33"}
-    <Axes: >
-:::
-
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/6cf7cc03867a233a6bab1310a40d6aa004f2eb8b.png)
-:::
-:::
 
-::: {.cell .markdown id="HAW4ymYNQ21r"}
 **Exercises**
 
 -   What is correlation coefficient? How is it computed and why it is
@@ -834,19 +746,14 @@ sns.heatmap(stroke_data[numerical_cols].corr(), annot=True, linewidths=0.5,)
 -   Why is it important (or may not be important) to consider
     correlation between varibles? See here
     <https://www.widsworldwide.org/get-inspired/blog/a-data-scientists-deep-dive-into-the-wids-datathon/>
-:::
 
-::: {.cell .markdown id="L4FrJsuEQ7hJ"}
 **Target Variable vs Numerical Attributes**
-:::
 
-::: {.cell .code execution_count="34" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="_G4ULhgoQ9DD" outputId="bb78749d-24aa-4d4c-da6b-bdb8c0180624"}
 ``` python
 for col in numerical_cols:
     print(stroke_data.groupby("stroke").agg({col:"mean"}), end="\n\n")
 ```
 
-::: {.output .stream .stdout}
                       id
     stroke              
     0       36487.236371
@@ -866,10 +773,7 @@ for col in numerical_cols:
     stroke           
     0       28.823064
     1       30.471292
-:::
-:::
 
-::: {.cell .markdown id="Q-5QnNyPRBWD"}
 **Exercises**
 
 **Can you visualize these results?**
