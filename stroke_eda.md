@@ -20,7 +20,6 @@ jupyter:
 -   above 90: A+
 
 Hint: do you have enough information to write a program?
-:::
 
 
 ``` python
@@ -50,7 +49,6 @@ print(f"The grade is: {grade}")
 This code will throw a NameError because the variable hour in
 print(number_of_minutes(hour)) is not defined. The correct variable name
 is hours.
-:::
 
 ::: {.cell .code execution_count="26" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="hOQE0c16DaDq" outputId="495ff735-be42-4135-f1b2-c1e83f844f96"}
 ``` python
