@@ -44,10 +44,7 @@ print(f"The grade is: {grade}")
 ::: {.output .stream .stdout}
     Enter the score: 100
     The grade is: A+
-:::
-:::
 
-::: {.cell .markdown id="2nVwaisB_hk3"}
 1.  What\'s the output here?
 
 This code will throw a NameError because the variable hour in
