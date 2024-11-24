@@ -40,7 +40,6 @@ else:  # score > 90
 print(f"The grade is: {grade}")
 ```
 
-::: {.output .stream .stdout}
     Enter the score: 100
     The grade is: A+
 
@@ -50,7 +49,6 @@ This code will throw a NameError because the variable hour in
 print(number_of_minutes(hour)) is not defined. The correct variable name
 is hours.
 
-::: {.cell .code execution_count="26" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="hOQE0c16DaDq" outputId="495ff735-be42-4135-f1b2-c1e83f844f96"}
 ``` python
 hours = 3
 
@@ -62,17 +60,11 @@ def number_of_minutes(hours):
 print(number_of_minutes(hours))
 ```
 
-::: {.output .stream .stdout}
-    180
-:::
-:::
+180
 
-::: {.cell .markdown id="FRVl3J4LDv8-"}
 1.  Write a function to return the number of hours for a given number of
     days
-:::
 
-::: {.cell .code execution_count="25" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="39ui5ovQD5n9" outputId="20deb9b1-0c1a-461f-f3ff-e987513146ea"}
 ``` python
 def number_of_hours(days):
     HOURS_PER_DAY = 24
@@ -82,12 +74,8 @@ days = 7
 print(f"{days} days equals {number_of_hours(days)} hours.")
 ```
 
-::: {.output .stream .stdout}
     7 days equals 168 hours.
-:::
-:::
 
-::: {.cell .markdown id="_BOuGk0NFiwX"}
 1.  You are given a series of monthly sales revenue (in thousand USD),
     write a series of functions to compute the following descriptive
     statistics:
@@ -99,9 +87,7 @@ print(f"{days} days equals {number_of_hours(days)} hours.")
 -   Standard deviation
 -   Count
 -   Range
-:::
 
-::: {.cell .code execution_count="24" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="bid9wsksGNAO" outputId="468f0745-cb3b-4601-9c76-979e59d86182"}
 ``` python
 import statistics
 
@@ -134,7 +120,6 @@ for key, value in stats.items():
     print(f"{key}: {value}")
 ```
 
-::: {.output .stream .stdout}
     Mean: 218.54166666666666
     Median: 210.0
     Mode: 210
@@ -142,10 +127,7 @@ for key, value in stats.items():
     Standard Deviation: 55.35417910986971
     Count: 24
     Range: 190
-:::
-:::
 
-::: {.cell .markdown id="hFOV3TUFGgWw"}
 1.  You have a dataset of product categories sold in a department store.
     Calculate descriptive statistics describing the data:
 
@@ -153,9 +135,7 @@ for key, value in stats.items():
 -   Unique product categories
 -   Frequencies of each product category
 -   Most frequently sold product category
-:::
 
-::: {.cell .code execution_count="28" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="TtQjjD_5GwJ2" outputId="7f509048-b1f8-49f9-e101-f6564097b3f9"}
 ``` python
 from collections import Counter
 
@@ -184,31 +164,20 @@ for key, value in category_stats.items():
     print(f"{key}: {value}")
 ```
 
-::: {.output .stream .stdout}
     Total Products: 22
     Unique Categories: {'Clothing', 'Home & Garden', 'Beauty', 'Electronics', 'Toys'}
     Category Frequencies: Counter({'Clothing': 7, 'Electronics': 6, 'Home & Garden': 3, 'Beauty': 3, 'Toys': 3})
     Most Common Category: ('Clothing', 7)
-:::
-:::
-
-::: {.cell .markdown id="HvVsl3CLRduI"}
 
 ------------------------------------------------------------------------
-:::
 
-::: {.cell .code execution_count="2" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="ALtSAHyyIF6B" outputId="737168fe-31ec-45e0-ef5a-10c9a60692c8"}
 ``` python
 from google.colab import drive
 drive.mount("/content/drive")
 ```
 
-::: {.output .stream .stdout}
     Mounted at /content/drive
-:::
-:::
 
-::: {.cell .code execution_count="4" id="D2bl8OvUIeYd"}
 ``` python
 # Import relevant libraries
 
@@ -219,9 +188,7 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
 ```
-:::
 
-::: {.cell .code execution_count="6" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="uW0MLVaZI-0Z" outputId="85cfa180-f2f1-4ed3-da41-4fa4968933cb"}
 ``` python
 # Change the path to point to your data location
 filepath = "/content/drive/MyDrive/DataCamp/healthcare-dataset-stroke-data.csv"
@@ -233,7 +200,6 @@ stroke_data = pd.read_csv(filepath)
 print(stroke_data)
 ```
 
-::: {.output .stream .stdout}
              id  gender   age  hypertension  heart_disease ever_married  \
     0      9046    Male  67.0             0              1          Yes   
     1     51676  Female  61.0             0              0          Yes   
@@ -274,15 +240,11 @@ print(stroke_data)
     5109       0  
 
     [5110 rows x 12 columns]
-:::
-:::
 
-::: {.cell .code execution_count="7" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="4dnKFF_UJX6F" outputId="d261d722-c790-46a9-8c9b-bafefe80e283"}
 ``` python
 stroke_data.info()
 ```
 
-::: {.output .stream .stdout}
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 5110 entries, 0 to 5109
     Data columns (total 12 columns):
@@ -302,10 +264,7 @@ stroke_data.info()
      11  stroke             5110 non-null   int64  
     dtypes: float64(3), int64(4), object(5)
     memory usage: 479.2+ KB
-:::
-:::
 
-::: {.cell .markdown id="tnVOkI77Jhlz"}
 Each row in the data provides relavant information about the patient.
 
 1.  id: unique identifier
@@ -327,9 +286,7 @@ Each row in the data provides relavant information about the patient.
 
 -   Note: \"Unknown\" in smoking_status means that the information is
     unavailable for this patient
-:::
 
-::: {.cell .markdown id="9zWVhRWfLgB0"}
 **Exercises:**
 
 *Which columns are numerical and which ones are categorical?*
@@ -365,9 +322,7 @@ separatey?*
     before being used in machine learning models.
 -   Interpretation: The insights derived from numerical and categorical
     variables can be quite different.
-:::
 
-::: {.cell .markdown id="mAqDfSl-1I1y"}
 **Formulate Data Questions** (Hypothesis)
 
 1.  *What valuable insights can we discover from the data?*
@@ -386,9 +341,7 @@ groups (e.g., urban versus rural residents).
     prevention?
 -   Should targeted healthcare programs be implemented for specific
     groups (based on age, lifestyle, or location)?
-:::
 
-::: {.cell .markdown id="4wDHMPEe1zVg"}
 **Exploratory Data Analysis**
 
 Before we start, let\'s revise some concepts related to distributions:
@@ -416,9 +369,7 @@ the third quartile (Q3), used to detect outliers.
 -   Mean: The sum of all values divided by the total number of values.
 -   Median: The middle value when the data is sorted in order.
 -   Mode: The value that appears most frequently in the dataset
-:::
 
-::: {.cell .markdown id="pUTZS8Mf4i_U"}
 **Check for missing values** Why? Missing values is number one problem
 with a dataset because it affects almost every aspect of your downstream
 analysis. For example:
@@ -436,16 +387,12 @@ Missing data can reduce the performance of predictive models. For
 example, machine learning models may struggle to process missing values
 if proper handling (e.g., imputation or removal) isn't done. Model
 quality can be compromised, leading to inaccurate predictions.
-:::
 
-::: {.cell .markdown id="6KpnLQZwQjw3"}
 **Dealling with Categorical and Numerical Variables**
 
 col_names() - This a function created to get the columns names that has
 categorical and numerical data separately
-:::
 
-::: {.cell .code execution_count="31" id="DM3c7ZOzQnxF"}
 ``` python
 def col_names(df):
     # Get categorical Variables
@@ -461,21 +408,15 @@ def col_names(df):
     print(f"Numerical Cols: {num_cols} \nCategorical Cols: {cat_cols} \nNumerical but Categorical: {num_but_cat}")
     return num_cols, cat_cols
 ```
-:::
 
-::: {.cell .code execution_count="32" colab="{\"base_uri\":\"https://localhost:8080/\"}" id="hqRM1cFwQr0e" outputId="1f0a7882-66ff-4cb6-f392-5c40349f7064"}
 ``` python
 numerical_cols, categorical_cols = col_names(stroke_data)
 ```
 
-::: {.output .stream .stdout}
     Numerical Cols: ['id', 'age', 'avg_glucose_level', 'bmi'] 
     Categorical Cols: ['hypertension', 'heart_disease', 'stroke', 'gender', 'ever_married', 'work_type', 'Residence_type', 'smoking_status'] 
     Numerical but Categorical: ['hypertension', 'heart_disease', 'stroke']
-:::
-:::
 
-::: {.cell .code execution_count="8" colab="{\"base_uri\":\"https://localhost:8080/\",\"height\":472}" id="Jpyd-jDb5FNq" outputId="7c816fab-0451-469e-f88c-d97bc89ae13b"}
 ``` python
 # Visuealize each attribute
 sns.histplot(x=stroke_data["age"], data=stroke_data, color="blue")
