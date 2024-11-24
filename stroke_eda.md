@@ -729,24 +729,6 @@ factors like alcohol consumption or unhealthy eating. However, this
 could also reflect data collection bias (e.g., males being
 overrepresented or females being underdiagnosed).
 
-**Correlation between numerical columns**
-
-``` python
-sns.heatmap(stroke_data[numerical_cols].corr(), annot=True, linewidths=0.5,)
-```
-
-![](vertopal_4db5c5a4c08e445ebcc155088842d070/6cf7cc03867a233a6bab1310a40d6aa004f2eb8b.png)
-
-**Exercises**
-
--   What is correlation coefficient? How is it computed and why it is
-    important?
--   Why we only compute corellation coefficients between numerical
-    variables?
--   Why is it important (or may not be important) to consider
-    correlation between varibles? See here
-    <https://www.widsworldwide.org/get-inspired/blog/a-data-scientists-deep-dive-into-the-wids-datathon/>
-
 **Target Variable vs Numerical Attributes**
 
 ``` python
