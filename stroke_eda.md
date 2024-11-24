@@ -421,17 +421,7 @@ numerical_cols, categorical_cols = col_names(stroke_data)
 # Visuealize each attribute
 sns.histplot(x=stroke_data["age"], data=stroke_data, color="blue")
 ```
-
-::: {.output .execute_result execution_count="8"}
-    <Axes: xlabel='age', ylabel='Count'>
-:::
-
-::: {.output .display_data}
 ![](vertopal_4db5c5a4c08e445ebcc155088842d070/ca64389078bca9516952181a2f2386deebfa28be.png)
-:::
-:::
-
-::: {.cell .markdown id="jV_NnsPOKLty"}
 **Exercises:**
 
 -   Can you plot the histograms of other numerical columns?
